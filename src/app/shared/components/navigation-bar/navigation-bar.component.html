@@ -1,4 +1,5 @@
 <nav class="navbar">
+  <div class="navbar-inner">
     <a 
       *ngFor="let item of navItems"
       (click)="navigateTo(item.path)"
@@ -7,4 +8,5 @@
     >
       {{ item.label }}
     </a>
+  </div>
 </nav>

@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class NavigationBarComponent {
 
   public navItems: NavigationItem[] = [
-    { label: '', path: '', img: ''},
     { label: 'Home', path: '' },
     { label: 'Gallery', path: 'gallery' },
     { label: 'Comments', path: 'comments-section' },
@@ -19,7 +18,7 @@ export class NavigationBarComponent {
 
   constructor(private readonly router: Router) {}
 
-  navigateTo(path: string): void {
+  public navigateTo(path: string): void {
     this.router.navigate([path]);
   }
 }
