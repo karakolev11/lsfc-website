@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommentsComponent } from './comments.component';
+import { SharedModule } from "../../shared/shared.module";
 
 
 
@@ -9,7 +10,8 @@ import { CommentsComponent } from './comments.component';
     CommentsComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    SharedModule
+]
 })
 export class CommentsModule { }

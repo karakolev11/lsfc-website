@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavigationItem } from '../../models/navigation-item.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class NavigationBarComponent {
 
+  public navItems: NavigationItem[] = [
+    { label: '', path: '', img: ''},
+    { label: 'Home', path: '' },
+    { label: 'Gallery', path: 'gallery' },
+    { label: 'Comments', path: 'comments-section' },
+    { label: 'Contact', path: 'contact-page' },
+  ];
+
+  constructor(private readonly router: Router) {}
+
+  navigateTo(path: string): void {
+    this.router.navigate([path]);
+  }
 }
