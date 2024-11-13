@@ -20,6 +20,7 @@ export class ContactFormComponent {
   public submit(): void {
     const data = this.contactForm.value;
     console.log(data);
+    this.contactForm.reset();
   }
 
 }

@@ -1,0 +1,24 @@
+<div class="add-comment">
+    <form [formGroup]="comment" (ngSubmit)="submit()">
+        <div class="row">
+            <input id="username" formControlName="username" type="text" placeholder="Username"/>
+            <div class="hint" *ngIf="comment.get('username')?.touched">
+                <div *ngIf="comment.get('username')?.hasError('required')" class="error">
+                    Username is required.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <textarea id="text" formControlName="text" placeholder="Tell me more about..."></textarea>
+            <div class="hint" *ngIf="comment.get('text')?.touched">
+                <div *ngIf="comment.get('text')?.hasError('required')" class="error">
+                    This section is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button type="submit" [disabled]="!comment.valid">Comment</button> 
+        </div>
+    </form>
+</div>

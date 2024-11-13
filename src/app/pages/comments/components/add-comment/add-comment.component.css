@@ -1,27 +1,20 @@
-.contact-form {
+.add-comment {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-.contact-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #0077b6; 
 }
   
-.contact-form .row {
+.add-comment .row {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
   
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.add-comment input[type="text"],
+.add-comment textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;
@@ -32,18 +25,18 @@
     resize: none;
 }
   
-.contact-form input:focus,
-.contact-form textarea:focus {
+.add-comment input:focus,
+.add-comment textarea:focus {
     border-color: #00509e;
     outline: none;
 }
-  
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
+
+.add-comment input::placeholder,
+.add-comment textarea::placeholder {
     color: #666666;
 }
-  
-.contact-form .controls button {
+
+.add-comment .controls button {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -54,35 +47,36 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-  
-.contact-form .controls button:hover {
-    background-color: #00509e;
+
+.add-comment .controls button:hover {
+background-color: #00509e;
 }
-  
-.contact-form .controls button:disabled {
+
+.add-comment .controls button:disabled {
     background-color: #cccccc;
     color: #666666;
     cursor: not-allowed;
     pointer-events: none;
 }
-  
-.contact-form .hint {
+
+.add-comment .hint {
     margin-top: 5px;
     font-size: 12px;
     color: #d9534f; 
 }
   
+
 @media (max-width: 768px) {
-    .contact-form {
+    .add-comment {
         padding: 15px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    .add-comment input,
+    .add-comment textarea {
         font-size: 14px;
     }
 
-    .contact-form .controls button {
+    .add-comment .controls button {
         padding: 10px;
         font-size: 14px;
     }
