@@ -10,6 +10,7 @@ import { ContactModule } from './pages/contact/contact.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CommentsModule,
     ContactModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false }}
   ],
   bootstrap: [AppComponent]
 })
