@@ -9,6 +9,7 @@ import { CommentsModule } from './pages/comments/comments.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
