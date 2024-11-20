@@ -10,7 +10,7 @@
         <span *ngIf="item.isNew" class="new-badge">New</span>
       </div>
       <div class="gallery-card-image">
-        <img [src]="item.url" [alt]="item.title" />
+        <img [src]="'../../../../../assets/images/' + item.url" [alt]="item.title" src=""/>
       </div>
       <div class="gallery-card-content">
         <p class="gallery-description">{{ item.description }}</p>

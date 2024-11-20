@@ -1,10 +1,10 @@
 import { GalleryItem } from "../models/gallery-item.model";
 
-export const GalletyListMock: GalleryItem[] = [
+export const GalleryListMock: GalleryItem[] = [
     {
       title: 'Sunset Bliss',
       description: 'A beautiful sunset over the ocean with vibrant orange and pink hues.',
-      url: 'https://via.placeholder.com/300x200?text=Sunset',
+      url: 'sunset-bliss.jpg',
       likes: 120,
       isNew: true,
       date: new Date('2024-11-01'),
@@ -12,7 +12,7 @@ export const GalletyListMock: GalleryItem[] = [
     {
       title: 'Mountain Majesty',
       description: 'Snow-capped mountains under a clear blue sky.',
-      url: 'https://via.placeholder.com/300x200?text=Mountain',
+      url: 'mountain-majesty.jpg',
       likes: 85,
       isNew: false,
       date: new Date('2024-10-15'),
@@ -20,7 +20,7 @@ export const GalletyListMock: GalleryItem[] = [
     {
       title: 'City Lights',
       description: 'A bustling cityscape at night with glowing lights.',
-      url: 'https://via.placeholder.com/300x200?text=City',
+      url: 'city-lights.jpg',
       likes: 200,
       isNew: true,
       date: new Date('2024-11-10'),
@@ -28,7 +28,7 @@ export const GalletyListMock: GalleryItem[] = [
     {
       title: 'Forest Pathway',
       description: 'A serene path through a dense forest, lined with tall trees.',
-      url: 'https://via.placeholder.com/300x200?text=Forest',
+      url: 'forest-pathway.jpg',
       likes: 65,
       isNew: false,
       date: new Date('2024-09-30'),
@@ -36,7 +36,7 @@ export const GalletyListMock: GalleryItem[] = [
     {
       title: 'Desert Mirage',
       description: 'A stunning desert landscape with golden sands and a mirage in the distance.',
-      url: 'https://via.placeholder.com/300x200?text=Desert',
+      url: 'desert-mirage.jpg',
       likes: 45,
       isNew: false,
       date: new Date('2024-08-20'),
@@ -44,7 +44,7 @@ export const GalletyListMock: GalleryItem[] = [
     {
       title: 'Ocean Wave',
       description: 'A powerful ocean wave crashing on the shore.',
-      url: 'https://via.placeholder.com/300x200?text=Wave',
+      url: 'ocean-waves.jpg',
       likes: 150,
       isNew: true,
       date: new Date('2024-11-18'),
