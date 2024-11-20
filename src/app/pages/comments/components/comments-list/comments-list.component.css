@@ -60,6 +60,13 @@
   color: #777777;
 }
 
+.date {
+  font-style: italic;
+  font-size: 12px;
+  color: #777777;
+  text-align: end;
+}
+
 @media (max-width: 768px) {
   .list {
     padding: 15px;

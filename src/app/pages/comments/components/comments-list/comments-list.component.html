@@ -10,7 +10,7 @@
           <p>
             {{ comment.text }}
           </p>
-          {{ comment.date | date: 'medium' }}
+          <div class="date">{{ comment.date | date: 'longDate' }}</div>
         </div>
     </div>
 </div>
