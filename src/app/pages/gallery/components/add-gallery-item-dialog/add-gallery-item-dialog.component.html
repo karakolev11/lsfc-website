@@ -1,6 +1,12 @@
 
 <h2 mat-dialog-title>Add New Gallery Item</h2>
-<mat-dialog-content>
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="galleryItemForm" (ngSubmit)="onAddItem()"> 
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" placeholder="Enter title" />
+    </mat-form-field>
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="onClose()">Close</button>

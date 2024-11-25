@@ -1,0 +1,19 @@
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+  
+.form-field {
+    width: 100%!important;
+}
+
+mat-dialog-actions {
+    padding-top: 15px;
+}
+
+mat-dialog-actions button {
+    margin-left: 10px;
+}
+  
