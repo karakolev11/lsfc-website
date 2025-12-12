@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { GalleryListMock } from '../../mock/gallery-list.mock';
 import { GalleryItem } from '../../models/gallery-item.model';
 import { AddGalleryItemDialogComponent } from '../add-gallery-item-dialog/add-gallery-item-dialog.component';
+import { GalleryService } from '../../services/gallery.service';
 
 @Component({
   selector: 'app-gallery-list',
@@ -12,7 +13,14 @@ import { AddGalleryItemDialogComponent } from '../add-gallery-item-dialog/add-ga
 export class GalleryListComponent {
   public galleryList: GalleryItem[] = GalleryListMock;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog,
+    private galleryService: GalleryService
+  ) {
+    this.galleryService.getAll().subscribe((data) => {
+      this.galleryList = [...GalleryListMock, ...data];
+    })
+  }
 
   public addItem(): void {
     const dialog = this.dialog.open(AddGalleryItemDialogComponent, {

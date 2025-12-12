@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -9,11 +10,13 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ],
   exports: [
     NavigationBarComponent,
-    FooterComponent
+    FooterComponent,
+    MatIconModule
   ]
 })
 export class SharedModule { }

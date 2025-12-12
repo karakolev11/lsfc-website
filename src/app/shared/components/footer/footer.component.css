@@ -5,6 +5,11 @@
   background-color: #003566; 
   padding: 15px 0;
   color: #ffffff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
 }
 
 .footer-content {

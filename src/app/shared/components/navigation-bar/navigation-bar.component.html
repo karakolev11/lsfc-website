@@ -9,4 +9,22 @@
       {{ item.label }}
     </a>
   </div>
+
+  <div class="auth-icons">
+    <ng-container *ngIf="!isLoggedIn">
+      <button class="icon-btn" (click)="navigateTo('login')" aria-label="Login">
+        <mat-icon class="auth-icon">person</mat-icon>
+      </button>
+
+      <button class="icon-btn" (click)="navigateTo('register')" aria-label="Register">
+        <mat-icon class="auth-icon">person_add</mat-icon>
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn">
+      <button class="icon-btn" (click)="logout()" aria-label="Logout">
+        <mat-icon class="auth-icon">logout</mat-icon>
+      </button>
+    </ng-container>
+  </div>
 </nav>

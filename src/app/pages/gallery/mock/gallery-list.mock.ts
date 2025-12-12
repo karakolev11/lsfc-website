@@ -7,7 +7,7 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'sunset-bliss.jpg',
       likes: 120,
       isNew: true,
-      date: new Date('2024-11-01'),
+      createdAt: new Date('2024-11-01'),
     },
     {
       title: 'Mountain Majesty',
@@ -15,7 +15,7 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'mountain-majesty.jpg',
       likes: 85,
       isNew: false,
-      date: new Date('2024-10-15'),
+      createdAt: new Date('2024-10-15'),
     },
     {
       title: 'City Lights',
@@ -23,7 +23,7 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'city-lights.jpg',
       likes: 200,
       isNew: true,
-      date: new Date('2024-11-10'),
+      createdAt: new Date('2024-11-10'),
     },
     {
       title: 'Forest Pathway',
@@ -31,7 +31,7 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'forest-pathway.jpg',
       likes: 65,
       isNew: false,
-      date: new Date('2024-09-30'),
+      createdAt: new Date('2024-09-30'),
     },
     {
       title: 'Desert Mirage',
@@ -39,7 +39,7 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'desert-mirage.jpg',
       likes: 45,
       isNew: false,
-      date: new Date('2024-08-20'),
+      createdAt: new Date('2024-08-20'),
     },
     {
       title: 'Ocean Wave',
@@ -47,6 +47,6 @@ export const GalleryListMock: GalleryItem[] = [
       url: 'ocean-waves.jpg',
       likes: 150,
       isNew: true,
-      date: new Date('2024-11-18'),
+      createdAt: new Date('2024-11-18'),
     },
   ];

@@ -16,7 +16,7 @@
         <p class="gallery-description">{{ item.description }}</p>
         <div class="gallery-meta">
           <span class="likes">❤️ {{ item.likes }}</span>
-          <span class="date">{{ item.date | date: 'longDate' }}</span>
+          <span class="date">{{ item.createdAt | date: 'longDate' }}</span>
         </div>
       </div>
     </div>

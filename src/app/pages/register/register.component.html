@@ -1,0 +1,37 @@
+<div class="contact-form">
+  <h1>Register</h1>
+
+  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <div class="row">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+      <div class="hint" *ngIf="registerForm.get('email')?.touched">
+        <div *ngIf="registerForm.get('email')?.hasError('required')" class="error">Email is required.</div>
+        <div *ngIf="registerForm.get('email')?.hasError('email')" class="error">Email is invalid.</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" />
+      <div class="hint" *ngIf="registerForm.get('password')?.touched">
+        <div *ngIf="registerForm.get('password')?.hasError('required')" class="error">Password is required.</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="confirm">Confirm Password:</label>
+      <input id="confirm" formControlName="confirm" type="password" />
+      <div class="hint" *ngIf="registerForm.get('confirm')?.touched">
+        <div *ngIf="registerForm.get('confirm')?.hasError('required')" class="error">Confirm is required.</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+      <button type="button" class="secondary" (click)="reset()">Reset</button>
+    </div>
+  </form>
+
+  <div *ngIf="submitted" class="success">Registration submitted.</div>
+</div>

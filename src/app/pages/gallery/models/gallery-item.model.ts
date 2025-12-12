@@ -4,5 +4,5 @@ export interface GalleryItem {
     url: string;
     likes: number;
     isNew: boolean;
-    date: Date | string;
+    createdAt: Date | string;
 }

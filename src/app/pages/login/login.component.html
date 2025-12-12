@@ -1,0 +1,29 @@
+<div class="contact-form">
+  <h1>Login</h1>
+
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="row">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+      <div class="hint" *ngIf="loginForm.get('email')?.touched">
+        <div *ngIf="loginForm.get('email')?.hasError('required')" class="error">Email is required.</div>
+        <div *ngIf="loginForm.get('email')?.hasError('email')" class="error">Email is invalid.</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" />
+      <div class="hint" *ngIf="loginForm.get('password')?.touched">
+        <div *ngIf="loginForm.get('password')?.hasError('required')" class="error">Password is required.</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button type="submit" [disabled]="!loginForm.valid || loading">{{ loading ? 'Signing in...' : 'Submit' }}</button>
+    </div>
+  </form>
+
+  <div *ngIf="error" class="hint">{{ error }}</div>
+  <div *ngIf="submitted" class="success">Login submitted.</div>
+</div>

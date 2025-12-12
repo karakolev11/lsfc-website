@@ -2,6 +2,7 @@
 body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding-bottom: 80px;
 }
 
 html, body {
@@ -18,9 +19,13 @@ app-root {
 }
   
 .container {
-    flex: 1; 
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     padding: 20px;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    background-color: transparent;
 }
   
   
