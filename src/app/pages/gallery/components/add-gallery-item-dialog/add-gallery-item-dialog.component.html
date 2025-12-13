@@ -1,13 +1,24 @@
 
 <h2 mat-dialog-title>Add New Gallery Item</h2>
 <mat-dialog-content class="dialog-content">
-  <form [formGroup]="galleryItemForm" (ngSubmit)="onAddItem()"> 
+  <form [formGroup]="galleryItemForm" (ngSubmit)="onAddItem()">
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Title</mat-label>
       <input matInput formControlName="title" placeholder="Enter title" />
     </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" rows="4" placeholder="Enter description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Image URL</mat-label>
+      <input matInput formControlName="imageUrl" placeholder="https://example.com/photo.jpg" />
+    </mat-form-field>
   </form>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button (click)="onClose()">Close</button>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onClose()">Cancel</button>
+  <button mat-flat-button color="primary" (click)="onAddItem()" [disabled]="!galleryItemForm.valid">Add</button>
 </mat-dialog-actions>

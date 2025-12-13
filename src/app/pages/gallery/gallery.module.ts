@@ -7,6 +7,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { GalleryListComponent } from './components/gallery-list/gallery-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -21,6 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SharedModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     ReactiveFormsModule
 
 ]

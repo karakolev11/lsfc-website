@@ -11,24 +11,37 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './add-gallery-item-dialog.component.css'
 })
 export class AddGalleryItemDialogComponent {
-
-  public galleryItemForm: FormGroup = this.fb.group({
-    title:       this.fb.control(undefined, [Validators.required]),
-    description: this.fb.control(undefined),
-  });
+  public galleryItemForm!: FormGroup;
 
   constructor(
-    private self: MatDialogRef<AddGalleryItemDialogComponent>, 
+    private self: MatDialogRef<AddGalleryItemDialogComponent>,
     private galleryService: GalleryService,
-    private fb: FormBuilder       
-  ) {}
+    private fb: FormBuilder
+  ) {
+    this.galleryItemForm = this.fb.group({
+      title: this.fb.control(undefined, [Validators.required]),
+      description: this.fb.control(undefined),
+      imageUrl: this.fb.control(undefined)
+    });
+  }
 
   public onClose(): void {
     this.self.close();
   }
 
   public onAddItem(): void {
-    let item = this.galleryItemForm.value as GalleryItem;
+    if (!this.galleryItemForm.valid) return;
+
+    const raw = this.galleryItemForm.value;
+    const item: GalleryItem = {
+      title: raw.title,
+      description: raw.description || '',
+      url: raw.imageUrl || '',
+      likes: 0,
+      isNew: true,
+      createdAt: new Date()
+    };
+
     this.galleryService.addImageToMockArray(item);
     this.self.close(item);
   }

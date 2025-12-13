@@ -16,4 +16,19 @@ mat-dialog-actions {
 mat-dialog-actions button {
     margin-left: 10px;
 }
+
+/* Make dialog visually consistent with other forms */
+.mat-dialog-container {
+    padding: 0 !important;
+}
+
+.dialog-content .mat-form-field {
+    background: #fff;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .dialog-content { padding: 10px 0; }
+}
   
