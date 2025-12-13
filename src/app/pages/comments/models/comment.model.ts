@@ -1,6 +1,6 @@
 export interface Comment {
     username: string;
     text: string;
-    date: Date | string;
+    createdAt: Date | string;
     rating?: number;
 }

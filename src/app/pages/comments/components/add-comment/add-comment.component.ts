@@ -20,10 +20,18 @@ export class AddCommentComponent {
 
   public submit(): void {
     let data = this.comment.value as Comment;
-
-    console.log(data);
-    this.commentsService.pushToMockComments(data);
-    this.comment.reset();
+    data.createdAt = new Date();
+    data.rating = Math.floor(Math.random() * 5) + 1;
+    this.commentsService.create(data).subscribe({
+      next: () => {
+        this.comment.reset();
+      },
+      error: () => {
+        // fallback to mock if API unavailable
+        this.commentsService.pushToMockComments(data);
+        this.comment.reset();
+      }
+    });
   }
 
 }
